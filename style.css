@@ -1,0 +1,651 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+:root {
+    --primary: #1776a8;
+    --primary-dark: #0d587e;
+    --secondary: #28a9d6;
+    --background: #f4f9fb;
+    --card: #ffffff;
+    --text: #263238;
+    --muted: #6d7a80;
+    --border: #dce7eb;
+    --danger: #d93025;
+    --success: #2e8b57;
+}
+
+
+body {
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background:
+        linear-gradient(
+            135deg,
+            #eef8fc,
+            #f9fcfd
+        );
+
+    color: var(--text);
+
+    min-height: 100vh;
+
+    padding: 30px 15px;
+}
+
+
+.container {
+    width: 100%;
+    max-width: 850px;
+    margin: auto;
+}
+
+
+/* =========================
+   CABEÇALHO
+========================= */
+
+.header {
+    background: var(--card);
+
+    border-radius: 24px;
+
+    padding: 35px;
+
+    margin-bottom: 20px;
+
+    box-shadow:
+        0 10px 35px rgba(0, 0, 0, 0.07);
+
+    text-align: center;
+}
+
+
+.logo-area {
+    margin-bottom: 20px;
+}
+
+
+.logo {
+    max-width: 180px;
+    max-height: 110px;
+    object-fit: contain;
+}
+
+
+.header h1 {
+    color: var(--primary-dark);
+
+    font-size: 30px;
+
+    margin-bottom: 8px;
+}
+
+
+.institution {
+    color: var(--secondary);
+
+    font-weight: bold;
+
+    font-size: 18px;
+
+    margin-bottom: 20px;
+}
+
+
+.header p {
+    line-height: 1.6;
+
+    color: var(--muted);
+}
+
+
+.info-box {
+    margin-top: 25px;
+
+    padding: 18px;
+
+    background: #eef9fd;
+
+    border-left: 5px solid var(--secondary);
+
+    border-radius: 10px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+
+    text-align: left;
+}
+
+
+.info-box strong {
+    color: var(--primary-dark);
+}
+
+
+.info-box span,
+.info-box small {
+    color: var(--muted);
+
+    line-height: 1.5;
+}
+
+
+/* =========================
+   SEÇÕES
+========================= */
+
+.form-section {
+    background: var(--card);
+
+    border-radius: 20px;
+
+    padding: 30px;
+
+    margin-bottom: 20px;
+
+    box-shadow:
+        0 8px 30px rgba(0, 0, 0, 0.05);
+}
+
+
+.section-title {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 30px;
+}
+
+
+.section-title > span {
+    width: 45px;
+    height: 45px;
+
+    border-radius: 50%;
+
+    background: var(--primary);
+
+    color: white;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-weight: bold;
+}
+
+
+.section-title h2 {
+    font-size: 21px;
+
+    color: var(--primary-dark);
+
+    margin-bottom: 5px;
+}
+
+
+.section-title p {
+    color: var(--muted);
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   CAMPOS
+========================= */
+
+.form-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 20px;
+}
+
+
+.field {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+
+    margin-bottom: 20px;
+}
+
+
+.field.full {
+    grid-column: 1 / -1;
+}
+
+
+.field label,
+.choice-title {
+    font-weight: bold;
+
+    font-size: 14px;
+
+    color: #34474f;
+}
+
+
+.field label span,
+.choice-title span {
+    color: var(--danger);
+}
+
+
+input,
+select,
+textarea {
+    width: 100%;
+
+    border: 1px solid var(--border);
+
+    border-radius: 10px;
+
+    padding: 13px 14px;
+
+    font-size: 15px;
+
+    font-family: inherit;
+
+    background: #fff;
+
+    color: var(--text);
+
+    outline: none;
+
+    transition: 0.2s;
+}
+
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: var(--secondary);
+
+    box-shadow:
+        0 0 0 3px rgba(40, 169, 214, 0.12);
+}
+
+
+textarea {
+    resize: vertical;
+}
+
+
+.field small {
+    color: var(--muted);
+
+    font-size: 12px;
+
+    line-height: 1.4;
+}
+
+
+/* =========================
+   ESCONDER
+========================= */
+
+.hidden {
+    display: none !important;
+}
+
+
+/* =========================
+   OPÇÕES
+========================= */
+
+.choice-group {
+    margin: 25px 0;
+
+    padding: 18px;
+
+    background: #f8fbfc;
+
+    border: 1px solid var(--border);
+
+    border-radius: 12px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+
+.radio-option {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    cursor: pointer;
+
+    font-size: 14px;
+}
+
+
+.radio-option input {
+    width: auto;
+
+    accent-color: var(--primary);
+}
+
+
+/* =========================
+   DECLARAÇÕES
+========================= */
+
+.declarations {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+
+    margin-bottom: 30px;
+}
+
+
+.declaration {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 12px;
+
+    padding: 16px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 12px;
+
+    cursor: pointer;
+
+    background: #fbfdfe;
+
+    transition: 0.2s;
+}
+
+
+.declaration:hover {
+    border-color: var(--secondary);
+}
+
+
+.declaration input {
+    width: auto;
+
+    margin-top: 3px;
+
+    accent-color: var(--primary);
+}
+
+
+.declaration span {
+    font-size: 14px;
+
+    line-height: 1.5;
+}
+
+
+/* =========================
+   BOTÕES
+========================= */
+
+.submit-area {
+    text-align: center;
+
+    margin: 30px 0;
+}
+
+
+.privacy {
+    color: var(--muted);
+
+    font-size: 13px;
+
+    line-height: 1.5;
+
+    margin-bottom: 18px;
+}
+
+
+.submit-button {
+    width: 100%;
+
+    border: none;
+
+    border-radius: 13px;
+
+    padding: 17px 20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--primary),
+            var(--secondary)
+        );
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+
+    box-shadow:
+        0 7px 20px rgba(23, 118, 168, 0.22);
+}
+
+
+.submit-button:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 10px 25px rgba(23, 118, 168, 0.3);
+}
+
+
+.clear-button {
+    margin-top: 12px;
+
+    background: transparent;
+
+    border: none;
+
+    color: var(--muted);
+
+    cursor: pointer;
+
+    text-decoration: underline;
+
+    padding: 8px;
+}
+
+
+/* =========================
+   SUCESSO
+========================= */
+
+.success-message {
+    background: white;
+
+    border-radius: 20px;
+
+    padding: 45px 30px;
+
+    text-align: center;
+
+    box-shadow:
+        0 10px 35px rgba(0, 0, 0, 0.07);
+}
+
+
+.success-icon {
+    width: 70px;
+    height: 70px;
+
+    border-radius: 50%;
+
+    background: #e9f7ef;
+
+    color: var(--success);
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 40px;
+
+    font-weight: bold;
+
+    margin: 0 auto 20px;
+}
+
+
+.success-message h2 {
+    color: var(--primary-dark);
+
+    margin-bottom: 15px;
+}
+
+
+.success-message p {
+    color: var(--muted);
+
+    line-height: 1.6;
+
+    margin-bottom: 10px;
+}
+
+
+/* =========================
+   RODAPÉ
+========================= */
+
+footer {
+    text-align: center;
+
+    padding: 25px;
+
+    color: var(--muted);
+
+    font-size: 13px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================
+   ERRO
+========================= */
+
+.error {
+    border-color: var(--danger) !important;
+
+    box-shadow:
+        0 0 0 3px rgba(217, 48, 37, 0.08) !important;
+}
+
+
+/* =========================
+   CELULAR
+========================= */
+
+@media (max-width: 650px) {
+
+    body {
+        padding: 10px;
+    }
+
+
+    .header {
+        padding: 25px 18px;
+
+        border-radius: 18px;
+    }
+
+
+    .header h1 {
+        font-size: 24px;
+    }
+
+
+    .form-section {
+        padding: 22px 18px;
+
+        border-radius: 16px;
+    }
+
+
+    .form-grid {
+        grid-template-columns: 1fr;
+
+        gap: 0;
+    }
+
+
+    .field.full {
+        grid-column: auto;
+    }
+
+
+    .section-title {
+        align-items: flex-start;
+    }
+
+
+    .section-title > span {
+        min-width: 40px;
+        width: 40px;
+
+        height: 40px;
+    }
+
+
+    .section-title h2 {
+        font-size: 18px;
+    }
+
+
+    input,
+    select,
+    textarea {
+        font-size: 16px;
+    }
+
+
+    .choice-group {
+        padding: 15px;
+    }
+
+
+    .declaration {
+        padding: 14px;
+    }
+
+}

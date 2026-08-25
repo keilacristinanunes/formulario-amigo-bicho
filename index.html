@@ -1,0 +1,1123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Termo de Adoção Responsável | Amigo Bicho</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="container">
+
+        <!-- CABEÇALHO -->
+        <header class="header">
+
+            <div class="logo-area">
+                <!--
+                    COLOQUE A LOGO DA AMIGO BICHO NA MESMA PASTA
+                    DO HTML E CHAME O ARQUIVO DE:
+
+                    logo-amigo-bicho.png
+                -->
+
+                <img 
+                    src="logo.png.jpeg" 
+                    alt="Amigo Bicho"
+                    class="logo"
+                    onerror="this.style.display='none'"
+                >
+            </div>
+
+            <div class="header-text">
+                <h1>🐾 Termo de Adoção Responsável</h1>
+
+                <p class="institution">
+                    Instituição Amigo Bicho
+                </p>
+
+                <p>
+                    Parabéns pela decisão de adotar!
+                </p>
+
+                <p>
+                    A adoção é um compromisso de amor e responsabilidade
+                    por toda a vida do animal.
+                </p>
+
+                <div class="info-box">
+                    <strong>📋 Importante</strong>
+                    <span>
+                        Este formulário substitui o termo impresso e registra
+                        oficialmente a adoção realizada junto à Instituição
+                        Amigo Bicho.
+                    </span>
+
+                    <small>⏱️ O preenchimento leva cerca de 5 minutos.</small>
+                </div>
+            </div>
+
+        </header>
+
+
+        <!-- FORMULÁRIO -->
+
+        <form id="adoptionForm" novalidate>
+
+
+            <!-- ========================= -->
+            <!-- DADOS DO ADOTANTE -->
+            <!-- ========================= -->
+
+            <section class="form-section">
+
+                <div class="section-title">
+                    <span>01</span>
+
+                    <div>
+                        <h2>Dados do adotante</h2>
+                        <p>Informe seus dados pessoais.</p>
+                    </div>
+                </div>
+
+
+                <div class="form-grid">
+
+                    <div class="field full">
+                        <label for="nome">
+                            Nome completo <span>*</span>
+                        </label>
+
+                        <input
+                            type="text"
+                            id="nome"
+                            name="nome"
+                            placeholder="Digite seu nome completo"
+                            required
+                        >
+                    </div>
+
+
+                    <div class="field">
+                        <label for="cpf">
+                            CPF <span>*</span>
+                        </label>
+
+                        <input
+                            type="text"
+                            id="cpf"
+                            name="cpf"
+                            placeholder="000.000.000-00"
+                            maxlength="14"
+                            required
+                        >
+                    </div>
+
+
+                    <div class="field">
+                        <label for="rg">
+                            RG
+                        </label>
+
+                        <input
+                            type="text"
+                            id="rg"
+                            name="rg"
+                            placeholder="Digite seu RG"
+                        >
+                    </div>
+
+
+                    <div class="field">
+                        <label for="nascimento">
+                            Data de nascimento
+                        </label>
+
+                        <input
+                            type="date"
+                            id="nascimento"
+                            name="nascimento"
+                        >
+                    </div>
+
+
+                    <div class="field">
+                        <label for="telefone">
+                            Telefone / WhatsApp <span>*</span>
+                        </label>
+
+                        <input
+                            type="tel"
+                            id="telefone"
+                            name="telefone"
+                            placeholder="(00) 00000-0000"
+                            maxlength="15"
+                            required
+                        >
+                    </div>
+
+
+                    <div class="field">
+                        <label for="telefoneSecundario">
+                            Telefone secundário
+                        </label>
+
+                        <input
+                            type="tel"
+                            id="telefoneSecundario"
+                            name="telefoneSecundario"
+                            placeholder="(00) 00000-0000"
+                            maxlength="15"
+                        >
+                    </div>
+
+
+                    <div class="field">
+                        <label for="email">
+                            E-mail
+                        </label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="seuemail@email.com"
+                        >
+                    </div>
+
+
+                    <div class="field full">
+                        <label for="endereco">
+                            Endereço completo <span>*</span>
+                        </label>
+
+                        <textarea
+                            id="endereco"
+                            name="endereco"
+                            rows="3"
+                            placeholder="Rua, número e complemento"
+                            required
+                        ></textarea>
+                    </div>
+
+
+                    <div class="field">
+                        <label for="bairro">
+                            Bairro <span>*</span>
+                        </label>
+
+                        <input
+                            type="text"
+                            id="bairro"
+                            name="bairro"
+                            placeholder="Digite o bairro"
+                            required
+                        >
+                    </div>
+
+
+                    <div class="field">
+                        <label for="cidade">
+                            Cidade <span>*</span>
+                        </label>
+
+                        <select
+                            id="cidade"
+                            name="cidade"
+                            required
+                        >
+
+                            <option value="">
+                                Selecione
+                            </option>
+
+                            <option value="Içara">
+                                Içara
+                            </option>
+
+                            <option value="Criciúma">
+                                Criciúma
+                            </option>
+
+                            <option value="Outra">
+                                Outra
+                            </option>
+
+                        </select>
+                    </div>
+
+
+                    <div
+                        class="field hidden"
+                        id="outraCidadeField"
+                    >
+
+                        <label for="outraCidade">
+                            Informe a cidade
+                        </label>
+
+                        <input
+                            type="text"
+                            id="outraCidade"
+                            name="outraCidade"
+                            placeholder="Digite sua cidade"
+                        >
+
+                    </div>
+
+
+                    <div class="field">
+                        <label for="cep">
+                            CEP
+                        </label>
+
+                        <input
+                            type="text"
+                            id="cep"
+                            name="cep"
+                            placeholder="00000-000"
+                            maxlength="9"
+                        >
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ========================= -->
+            <!-- SOBRE O ANIMAL -->
+            <!-- ========================= -->
+
+            <section class="form-section">
+
+                <div class="section-title">
+
+                    <span>02</span>
+
+                    <div>
+                        <h2>Sobre o animal</h2>
+                        <p>Informe os dados do animal adotado.</p>
+                    </div>
+
+                </div>
+
+
+                <div class="form-grid">
+
+                    <div class="field">
+                        <label for="nomeAnimal">
+                            Nome do animal
+                        </label>
+
+                        <input
+                            type="text"
+                            id="nomeAnimal"
+                            name="nomeAnimal"
+                            placeholder="Nome do animal"
+                        >
+                    </div>
+
+
+                    <div class="field">
+                        <label for="especie">
+                            Espécie
+                        </label>
+
+                        <select
+                            id="especie"
+                            name="especie"
+                        >
+
+                            <option value="">
+                                Selecione
+                            </option>
+
+                            <option value="Cão">
+                                🐶 Cão
+                            </option>
+
+                            <option value="Gato">
+                                🐱 Gato
+                            </option>
+
+                            <option value="Outra">
+                                Outra
+                            </option>
+
+                        </select>
+                    </div>
+
+
+                    <div
+                        class="field hidden"
+                        id="outraEspecieField"
+                    >
+
+                        <label for="outraEspecie">
+                            Informe a espécie
+                        </label>
+
+                        <input
+                            type="text"
+                            id="outraEspecie"
+                            name="outraEspecie"
+                        >
+
+                    </div>
+
+
+                    <div class="field">
+                        <label for="idadeAnimal">
+                            Idade aproximada
+                        </label>
+
+                        <input
+                            type="text"
+                            id="idadeAnimal"
+                            name="idadeAnimal"
+                            placeholder="Ex.: 2 anos"
+                        >
+                    </div>
+
+
+                    <div class="field">
+                        <label for="porte">
+                            Porte
+                        </label>
+
+                        <select
+                            id="porte"
+                            name="porte"
+                        >
+
+                            <option value="">
+                                Selecione
+                            </option>
+
+                            <option value="Pequeno">
+                                Pequeno
+                            </option>
+
+                            <option value="Médio">
+                                Médio
+                            </option>
+
+                            <option value="Grande">
+                                Grande
+                            </option>
+
+                        </select>
+                    </div>
+
+
+                    <div class="field">
+                        <label for="raca">
+                            Raça
+                        </label>
+
+                        <select
+                            id="raca"
+                            name="raca"
+                        >
+
+                            <option value="">
+                                Selecione
+                            </option>
+
+                            <option value="SDR (Sem Raça Definida)">
+                                SDR (Sem Raça Definida)
+                            </option>
+
+                            <option value="Mestiço">
+                                Mestiço
+                            </option>
+
+                            <option value="Outra">
+                                Outra
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div
+                        class="field hidden"
+                        id="outraRacaField"
+                    >
+
+                        <label for="outraRaca">
+                            Informe a raça
+                        </label>
+
+                        <input
+                            type="text"
+                            id="outraRaca"
+                            name="outraRaca"
+                        >
+
+                    </div>
+
+
+                    <div class="field">
+                        <label for="corPelagem">
+                            Cor da pelagem
+                        </label>
+
+                        <input
+                            type="text"
+                            id="corPelagem"
+                            name="corPelagem"
+                            placeholder="Ex.: caramelo"
+                        >
+                    </div>
+
+                </div>
+
+
+                <!-- RADIO GROUPS -->
+
+                <div class="choice-group">
+
+                    <label class="choice-title">
+                        O animal é castrado?
+                    </label>
+
+                    <label class="radio-option">
+                        <input
+                            type="radio"
+                            name="castrado"
+                            value="Sim"
+                        >
+                        <span>Sim</span>
+                    </label>
+
+                    <label class="radio-option">
+                        <input
+                            type="radio"
+                            name="castrado"
+                            value="Não"
+                        >
+                        <span>Não</span>
+                    </label>
+
+                </div>
+
+
+                <div class="choice-group">
+
+                    <label class="choice-title">
+                        O animal foi vermifugado?
+                    </label>
+
+                    <label class="radio-option">
+                        <input
+                            type="radio"
+                            name="vermifugado"
+                            value="Sim"
+                        >
+                        <span>Sim</span>
+                    </label>
+
+                    <label class="radio-option">
+                        <input
+                            type="radio"
+                            name="vermifugado"
+                            value="Não"
+                        >
+                        <span>Não</span>
+                    </label>
+
+                </div>
+
+
+                <div class="choice-group">
+
+                    <label class="choice-title">
+                        O animal foi vacinado?
+                    </label>
+
+                    <label class="radio-option">
+                        <input
+                            type="radio"
+                            name="vacinado"
+                            value="Sim"
+                        >
+                        <span>Sim</span>
+                    </label>
+
+                    <label class="radio-option">
+                        <input
+                            type="radio"
+                            name="vacinado"
+                            value="Não"
+                        >
+                        <span>Não</span>
+                    </label>
+
+                </div>
+
+
+                <div class="field">
+
+                    <label for="observacoes">
+                        Observações
+                    </label>
+
+                    <textarea
+                        id="observacoes"
+                        name="observacoes"
+                        rows="4"
+                        placeholder="Alguma informação importante sobre o animal?"
+                    ></textarea>
+
+                </div>
+
+            </section>
+
+
+            <!-- ========================= -->
+            <!-- LOCAL DO ANIMAL -->
+            <!-- ========================= -->
+
+            <section class="form-section">
+
+                <div class="section-title">
+
+                    <span>03</span>
+
+                    <div>
+                        <h2>Local onde o animal viverá</h2>
+                        <p>
+                            Queremos garantir que o animal tenha um ambiente seguro.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="choice-group">
+
+                    <label class="choice-title">
+                        O animal ficará: <span>*</span>
+                    </label>
+
+                    <label class="radio-option">
+                        <input
+                            type="radio"
+                            name="localAnimal"
+                            value="No endereço informado anteriormente"
+                            required
+                        >
+                        <span>
+                            No endereço informado anteriormente
+                        </span>
+                    </label>
+
+                    <label class="radio-option">
+                        <input
+                            type="radio"
+                            name="localAnimal"
+                            value="Em outro endereço"
+                        >
+                        <span>
+                            Em outro endereço
+                        </span>
+                    </label>
+
+                </div>
+
+
+                <div class="field">
+
+                    <label for="tipoMoradia">
+                        Você mora em:
+                    </label>
+
+                    <select
+                        id="tipoMoradia"
+                        name="tipoMoradia"
+                    >
+
+                        <option value="">
+                            Selecione
+                        </option>
+
+                        <option value="Casa">
+                            🏠 Casa
+                        </option>
+
+                        <option value="Apartamento">
+                            🏢 Apartamento
+                        </option>
+
+                        <option value="Chácara/Sítio">
+                            🌳 Chácara/Sítio
+                        </option>
+
+                        <option value="Outro">
+                            Outro
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="choice-group">
+
+                    <label class="choice-title">
+                        O imóvel possui espaço seguro para o animal?
+                    </label>
+
+                    <label class="radio-option">
+
+                        <input
+                            type="radio"
+                            name="espacoSeguro"
+                            value="Sim"
+                        >
+
+                        <span>Sim</span>
+
+                    </label>
+
+
+                    <label class="radio-option">
+
+                        <input
+                            type="radio"
+                            name="espacoSeguro"
+                            value="Não"
+                        >
+
+                        <span>Não</span>
+
+                    </label>
+
+                </div>
+
+
+                <div class="choice-group">
+
+                    <label class="choice-title">
+                        Há outros animais na residência?
+                    </label>
+
+                    <label class="radio-option">
+
+                        <input
+                            type="radio"
+                            name="outrosAnimais"
+                            value="Sim"
+                        >
+
+                        <span>Sim</span>
+
+                    </label>
+
+
+                    <label class="radio-option">
+
+                        <input
+                            type="radio"
+                            name="outrosAnimais"
+                            value="Não"
+                        >
+
+                        <span>Não</span>
+
+                    </label>
+
+                </div>
+
+
+                <div class="field">
+
+                    <label for="quaisAnimais">
+                        Se sim, quais?
+                    </label>
+
+                    <textarea
+                        id="quaisAnimais"
+                        name="quaisAnimais"
+                        rows="3"
+                        placeholder="Informe quais animais possui"
+                    ></textarea>
+
+                </div>
+
+
+                <div class="choice-group">
+
+                    <label class="choice-title">
+                        O imóvel é totalmente cercado/murado,
+                        impedindo que o animal tenha acesso à rua?
+                        <span>*</span>
+                    </label>
+
+                    <label class="radio-option">
+
+                        <input
+                            type="radio"
+                            name="imovelCercado"
+                            value="Sim"
+                            required
+                        >
+
+                        <span>Sim</span>
+
+                    </label>
+
+
+                    <label class="radio-option">
+
+                        <input
+                            type="radio"
+                            name="imovelCercado"
+                            value="Não"
+                        >
+
+                        <span>Não</span>
+
+                    </label>
+
+                </div>
+
+
+                <div class="choice-group">
+
+                    <label class="choice-title">
+                        Onde o animal ficará na maior parte do tempo?
+                        <span>*</span>
+                    </label>
+
+                    <label class="radio-option">
+
+                        <input
+                            type="radio"
+                            name="ondeFicara"
+                            value="Solto dentro da residência"
+                            required
+                        >
+
+                        <span>
+                            Solto dentro da residência
+                        </span>
+
+                    </label>
+
+
+                    <label class="radio-option">
+
+                        <input
+                            type="radio"
+                            name="ondeFicara"
+                            value="Solto no pátio/quintal cercado"
+                        >
+
+                        <span>
+                            Solto no pátio/quintal cercado
+                        </span>
+
+                    </label>
+
+
+                    <label class="radio-option">
+
+                        <input
+                            type="radio"
+                            name="ondeFicara"
+                            value="Preso em corrente"
+                        >
+
+                        <span>
+                            Preso em corrente
+                        </span>
+
+                    </label>
+
+
+                    <label class="radio-option">
+
+                        <input
+                            type="radio"
+                            name="ondeFicara"
+                            value="Canil"
+                        >
+
+                        <span>
+                            Canil
+                        </span>
+
+                    </label>
+
+
+                    <label class="radio-option">
+
+                        <input
+                            type="radio"
+                            name="ondeFicara"
+                            value="Outro"
+                        >
+
+                        <span>
+                            Outro
+                        </span>
+
+                    </label>
+
+                </div>
+
+            </section>
+
+
+            <!-- ========================= -->
+            <!-- TERMO -->
+            <!-- ========================= -->
+
+            <section class="form-section term-section">
+
+                <div class="section-title">
+
+                    <span>04</span>
+
+                    <div>
+                        <h2>Termo de Responsabilidade</h2>
+                        <p>
+                            Leia atentamente e confirme cada declaração.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="declarations">
+
+
+                    <label class="declaration">
+
+                        <input
+                            type="checkbox"
+                            name="declaracao1"
+                            value="Sim"
+                            required
+                        >
+
+                        <span>
+                            Estou apto(a) a assumir a guarda responsável
+                            deste animal.
+                        </span>
+
+                    </label>
+
+
+                    <label class="declaration">
+
+                        <input
+                            type="checkbox"
+                            name="declaracao2"
+                            value="Sim"
+                            required
+                        >
+
+                        <span>
+                            Comprometo-me a oferecer alimentação, água,
+                            abrigo, cuidados veterinários e bem-estar.
+                        </span>
+
+                    </label>
+
+
+                    <label class="declaration">
+
+                        <input
+                            type="checkbox"
+                            name="declaracao3"
+                            value="Sim"
+                            required
+                        >
+
+                        <span>
+                            Comprometo-me a não abandonar, vender ou doar
+                            este animal sem comunicar a Instituição
+                            Amigo Bicho.
+                        </span>
+
+                    </label>
+
+
+                    <label class="declaration">
+
+                        <input
+                            type="checkbox"
+                            name="declaracao4"
+                            value="Sim"
+                            required
+                        >
+
+                        <span>
+                            Estou ciente de que poderei ser acompanhado(a)
+                            pela instituição para verificar as condições
+                            do animal.
+                        </span>
+
+                    </label>
+
+
+                    <label class="declaration">
+
+                        <input
+                            type="checkbox"
+                            name="declaracao5"
+                            value="Sim"
+                            required
+                        >
+
+                        <span>
+                            Li e concordo com todas as informações deste termo.
+                        </span>
+
+                    </label>
+
+                </div>
+
+
+                <div class="field">
+
+                    <label for="assinatura">
+                        Digite seu nome completo como assinatura eletrônica
+                        <span>*</span>
+                    </label>
+
+                    <input
+                        type="text"
+                        id="assinatura"
+                        name="assinatura"
+                        placeholder="Digite seu nome completo"
+                        required
+                    >
+
+                    <small>
+                        Sua assinatura eletrônica será registrada juntamente
+                        com as informações deste formulário.
+                    </small>
+
+                </div>
+
+
+                <div class="field">
+
+                    <label for="dataAdocao">
+                        Data da adoção <span>*</span>
+                    </label>
+
+                    <input
+                        type="date"
+                        id="dataAdocao"
+                        name="dataAdocao"
+                        required
+                    >
+
+                </div>
+
+            </section>
+
+
+            <!-- ========================= -->
+            <!-- BOTÃO -->
+            <!-- ========================= -->
+
+            <div class="submit-area">
+
+                <p class="privacy">
+                    🔒 Seus dados serão utilizados para o processo
+                    de adoção responsável junto à Instituição Amigo Bicho.
+                </p>
+
+
+                <button
+                    type="submit"
+                    class="submit-button"
+                >
+
+                    <span>🐾</span>
+
+                    Enviar formulário pelo WhatsApp
+
+                </button>
+
+
+                <button
+                    type="button"
+                    id="clearButton"
+                    class="clear-button"
+                >
+
+                    Limpar formulário
+
+                </button>
+
+            </div>
+
+        </form>
+
+
+        <!-- ========================= -->
+        <!-- SUCESSO -->
+        <!-- ========================= -->
+
+        <section
+            id="successMessage"
+            class="success-message hidden"
+        >
+
+            <div class="success-icon">
+                ✓
+            </div>
+
+            <h2>Formulário preparado com sucesso! 🐾</h2>
+
+            <p>
+                As informações foram organizadas e o WhatsApp
+                será aberto para concluir o envio.
+            </p>
+
+            <p>
+                Obrigado por escolher a adoção responsável. ❤️
+            </p>
+
+            <button
+                type="button"
+                id="newFormButton"
+                class="submit-button"
+            >
+                Fazer novo formulário
+            </button>
+
+        </section>
+
+
+        <footer>
+
+            <p>
+                🐾 Instituição Amigo Bicho
+            </p>
+
+            <p>
+                Adoção responsável transforma vidas.
+            </p>
+
+        </footer>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
